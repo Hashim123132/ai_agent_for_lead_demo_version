@@ -37,3 +37,25 @@ Important:
 - When all fields are collected, say:
   "Thanks, I have collected your details. The owner will review and contact you."
 """
+
+
+EXTRACT_LEAD_PROMPT = """
+Extract rental lead details from this chat.
+
+Return ONLY valid JSON.
+No markdown.
+No explanation.
+
+Fields:
+name, phone, car_type, pickup_date, return_date, budget, currency
+
+Rules:
+- Phone must be a real phone number, not budget.
+- Budget is money amount only.
+- If phone has less than 10 digits, set phone to null.
+
+If a field is missing, use null.
+
+Chat:
+{messages_text}
+"""

@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
+from app.whatsapp import router as whatsapp_router
 from app.schemas import ChatRequest, ChatResponse
 from app.agent import chat_with_agent
 
@@ -13,6 +13,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+app.include_router(whatsapp_router)
+
 
 @app.get("/")
 def root():

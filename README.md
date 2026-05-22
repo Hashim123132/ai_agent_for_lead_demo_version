@@ -40,3 +40,12 @@ uvicorn app.main:app --reload
 credential.JSON 
 
 YOU WILL GET THIS from google cloud console
+
+
+Right now sessions are stored in Python RAM:
+
+sessions = {}
+leads = {}
+saved_leads = set()
+
+but u can change it ans use Redis Cache
