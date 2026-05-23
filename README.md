@@ -96,8 +96,7 @@ Generate from Google Cloud Console.
 
 (example .env)
 
-## Future Improvements
-
+## Future Improvements suggestions
 - Redis session storage
 - WhatsApp integration
 - CRM integration
