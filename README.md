@@ -1,7 +1,7 @@
 # AI Rental Inquiry Agent
 
 <p align="center">
-  <img src="./assets/ree;37.gif" width="900">
+  <img src="./assets/reel37.gif" width="900">
 </p>
 
 ## Features
