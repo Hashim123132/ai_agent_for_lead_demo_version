@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.whatsapp import router as whatsapp_router
 from app.schemas import ChatRequest, ChatResponse
 from app.agent import chat_with_agent
-
+from app.facebook import router as facebook_router
 app = FastAPI()
 
 app.add_middleware(
@@ -13,9 +13,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-app.include_router(whatsapp_router)
 
-
+app.include_router(facebook_router)
 @app.get("/")
 def root():
     return {"message": "AI Rental Agent backend is running"}
